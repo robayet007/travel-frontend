@@ -21,7 +21,7 @@ const AdminLogin = () => {
     setError('')
 
     // Verify credentials
-    if (username === 'admin' && password === '12345') {
+    if (username === 'admin' && password === 'QWER@#12') {
       localStorage.setItem('adminLoggedIn', 'true')
       navigate('/admin')
     } else {
@@ -33,8 +33,8 @@ const AdminLogin = () => {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <div className="w-full max-w-md">
         <div className="p-8 bg-white rounded-lg shadow-2xl">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">Admin Login</h2>
+          <div className="mb-8 text-center">
+            <h2 className="mb-2 text-3xl font-bold text-gray-800">Admin Login</h2>
             <p className="text-gray-600">Enter your credentials to access admin panel</p>
           </div>
           
@@ -75,7 +75,7 @@ const AdminLogin = () => {
             
             <button
               type="submit"
-              className="w-full px-4 py-3 text-white font-semibold bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-200 transform hover:scale-105"
+              className="w-full px-4 py-3 font-semibold text-white transition duration-200 transform rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105"
             >
               Login
             </button>
@@ -83,9 +83,7 @@ const AdminLogin = () => {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500">
-              Demo Credentials: <br />
-              Username: <span className="font-semibold">admin</span> <br />
-              Password: <span className="font-semibold">12345</span>
+             
             </p>
           </div>
         </div>
