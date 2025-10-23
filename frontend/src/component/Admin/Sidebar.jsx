@@ -8,7 +8,9 @@ const Sidebar = () => {
     { path: '/admin/holy-hajj', name: 'Holly Hajj', value: 'holy-hajj' },
     { path: '/admin/holy-umrah-hajj', name: 'Holly Umrah Hajj', value: 'holy-umrah-hajj' },
     { path: '/admin/international-tour', name: 'International Tour', value: 'international-tour' },
-    { path: '/admin/domestic-tour', name: 'Domestic Tour', value: 'domestic-tour' }
+    { path: '/admin/domestic-tour', name: 'Domestic Tour', value: 'domestic-tour' },
+    // { path: '/admin/notices', name: 'Notices', value: 'notices' },
+    // { path: '/admin/representatives', name: 'Representatives', value: 'representatives' }
   ]
 
   return (
