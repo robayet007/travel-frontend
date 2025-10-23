@@ -1,23 +1,33 @@
 {
-  "name": "frontend",
+  "name": "travel-frontend",
   "version": "1.0.0",
-  "main": "tailwind.config.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
+  "keywords": [
+    "travel",
+    "tourism",
+    "react"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Travel and Tourism Website Frontend",
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "axios": "^1.12.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
     "vite": "^7.1.11"
   }
 }

@@ -98,8 +98,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        // right part
-        <div className="flex-col items-center justify-center px-4 py-16 text-gray-800 align-bottom min-h felx">
+        {/* right part */}
+        <div className="flex flex-col items-center justify-center px-4 py-16 text-gray-800 min-h-screen">
           <div className="max-w-4xl mx-auto mb-12 text-center">
             <h1 className="mb-4 text-4xl font-bold">
               <span className="text-transparent bg-gradient-to-r from-purple-800 via-pink-600 to-orange-500 bg-clip-text">

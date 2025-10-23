@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'; 
 import FormServices from './FormServices';
 
-"use client"
-
 export default function About() {
   const leftServices = [
     "24/7 Service",

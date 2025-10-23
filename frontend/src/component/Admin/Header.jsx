@@ -5,7 +5,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('adminLoggedIn');
     navigate('/admin/login');
   };
 

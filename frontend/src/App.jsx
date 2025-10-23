@@ -1,162 +1,74 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebaseConfig";
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Carousel from "./components/Carousel/Carousel";
-import Home from "./pages/Home/Home";
-import NavMenu from "./components/NavMenu/NavMenu";
-import Footer from "./components/Footer/Footer";
-import GameShop from "./components/GameShop/GameShop";
-import Checkout from "./components/Checkout/Checkout";
-import Register from "./Auth/Register";
-import Login from "./Auth/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
-import ForgotPassword from "./Auth/ForgotPassword";
-import AdminDashboard from "./components/Admin/AdminDashboard";
-import { isAdminUser } from "./utils/admin";
-
-// Protected Route Component
-const ProtectedRoute = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
-
-  return user ? children : <Navigate to="/profile/login" />;
-};
-
-// Public Route Component (redirect if already logged in)
-const PublicRoute = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
-
-  return !user ? children : <Navigate to="/" />;
-};
-
-// ✅ Admin Route Component
-const AdminRoute = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
-
-  const isAdmin = user && isAdminUser(user);
-  return isAdmin ? children : <Navigate to="/" />;
-};
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import Slider from "./component/Slider";
+import Home from "./pages/Home";
+import Footer from "./component/Footer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import TourPackges from "./pages/TourPackges";
+import Domestic from "./pages/Domestic";
+import International from "./pages/International";
+import Hajj from "./pages/Hajj";
+import Umrah from "./pages/Umrah";
+import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function AppContent() {
   const location = useLocation();
-  const [user, setUser] = useState(null);
   
-  const isDashboard = location.pathname === "/dashboard" || location.pathname === "/profile/dashboard";
-  const isAdminDashboard = location.pathname === "/admin/dashboard";
-  const isCheckoutPage = location.pathname.startsWith("/checkout");
-  const isAuthPage = location.pathname === "/profile/login" || 
-                    location.pathname === "/profile/register" || 
-                    location.pathname === "/forgot-password";
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log('🔐 Auth State Changed - User:', user?.email);
-      console.log('📍 Current Path:', location.pathname);
-      setUser(user);
-    });
-
-    return () => unsubscribe();
-  }, [location.pathname]);
-
+  // Check if current route is any admin route (including login)
+  const isAdminRoute = location.pathname.startsWith('/admin');
+  
   return (
     <div className="app">
-      {!isAuthPage && !isAdminDashboard && <Navbar user={user} />}
-      {!isCheckoutPage && !isDashboard && !isAuthPage && !isAdminDashboard && <Carousel />}
+      {/* Hide navbar and slider for admin routes */}
+      {!isAdminRoute && <Navbar />}
+      {!isAdminRoute && <Slider />}
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/games" element={<GameShop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/tour-packages" element={<TourPackges />} />
+        <Route path="/domestic" element={<Domestic />} />
+        <Route path="/international" element={<International />} />
+        <Route path="/hajj" element={<Hajj />} />
+        <Route path="/umrah" element={<Umrah />} />
         
-        {/* ✅ Checkout Routes */}
-        <Route path="/checkout/:id" element={
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={
           <ProtectedRoute>
-            <Checkout />
+            <Admin />
           </ProtectedRoute>
         } />
-        
-        {/* ❌ GameDetails routes সরিয়ে দিন - AdminDashboard এর ভিতরে handle হবে */}
-        
-        <Route path="/profile/dashboard" element={
+        <Route path="/admin/holy-hajj" element={
           <ProtectedRoute>
-            <Dashboard />
+            <Admin />
           </ProtectedRoute>
         } />
-        
-        {/* ✅ Admin Routes - GameDetails এখানে handle হবে */}
-        <Route path="/admin/dashboard/*" element={
-          <AdminRoute>
-            <AdminDashboard />
-          </AdminRoute>
+        <Route path="/admin/holy-umrah-hajj" element={
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
         } />
-        
-        {/* Auth Routes */}
-        <Route path="/profile/login" element={
-          <PublicRoute>
-            <Login />
-          </PublicRoute>
+        <Route path="/admin/international-tour" element={
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
         } />
-        
-        <Route path="/profile/register" element={
-          <PublicRoute>
-            <Register />
-          </PublicRoute>
+        <Route path="/admin/domestic-tour" element={
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
         } />
-
-        <Route path="/forgot-password" element={
-          <PublicRoute>
-            <ForgotPassword />
-          </PublicRoute>
-        } />
-
-        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       
-      <NavMenu user={user}/>
-      {!isAuthPage && !isDashboard && !isAdminDashboard && <Footer />}
+      {/* Hide footer for admin routes */}
+      {!isAdminRoute && <Footer />}
     </div>
   );
 }
