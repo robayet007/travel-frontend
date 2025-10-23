@@ -7,7 +7,7 @@ export default function InternationalTourPackage() {
   const [loading, setLoading] = useState(true);
 
   // ✅ API Base URL Change - Vercel-এ deploy করা backend
-  const API_BASE = 'https://travel-website-khaki-three.vercel.app';
+  const API_BASE = 'https://travel-backend-3db7.onrender.com';
 
   // Fetch packages from API
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function InternationalTourPackage() {
         // ✅ URL Change - Vercel backend থেকে data fetch
         const response = await axios.get(`${API_BASE}/api/products/category/international-tour`);
         setTourPackages(response.data.data);
-        
+        console.log(response.data.data)
       } catch (error) {
         console.error('Error fetching packages:', error);
       } finally {

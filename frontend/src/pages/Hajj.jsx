@@ -8,7 +8,7 @@ export default function Hajj() {
   const [loading, setLoading] = useState(true);
 
   // ✅ API Base URL Change - Vercel backend
-  const API_BASE = 'https://travel-website-khaki-three.vercel.app';
+  const API_BASE = 'https://travel-backend-3db7.onrender.com';
 
   // Fetch packages from API
   useEffect(() => {

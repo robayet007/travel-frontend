@@ -14,7 +14,7 @@ const CategorySection = ({ category }) => {
   });
   const [imagePreview, setImagePreview] = useState(null);
 
-  const API_BASE = 'https://travel-website-khaki-three.vercel.app';
+  const API_BASE = 'https://travel-backend-3db7.onrender.com';
 
   // Fetch packages by category
   const fetchPackages = async () => {
