@@ -4,7 +4,6 @@ import About from './About'
 import { Link } from 'react-router-dom'
 import '../index.css'
 import ContactRepresentatives from '../component/ContactRepresentatives'
-import Notice from '../component/Notice'
 
 export default function Home() {
   return (
@@ -70,7 +69,6 @@ export default function Home() {
   
 
       <section className="py-20 text-center">
-        <Notice/>
         <ContactRepresentatives/>
      </section>
     </div>

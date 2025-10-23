@@ -13,6 +13,7 @@ import Hajj from "./pages/Hajj";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Notice from "./component/Notice";
 
 function AppContent() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function AppContent() {
     <div className="app">
       {/* Hide navbar and slider for admin routes */}
       {!isAdminRoute && <Navbar />}
+      {!isAdminRoute && <Notice/>}
       {!isAdminRoute && <Slider />}
       
       <Routes>
