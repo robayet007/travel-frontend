@@ -10,7 +10,6 @@ import TourPackges from "./pages/TourPackges";
 import Domestic from "./pages/Domestic";
 import International from "./pages/International";
 import Hajj from "./pages/Hajj";
-import Umrah from "./pages/Umrah";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -36,7 +35,6 @@ function AppContent() {
         <Route path="/domestic" element={<Domestic />} />
         <Route path="/international" element={<International />} />
         <Route path="/hajj" element={<Hajj />} />
-        <Route path="/umrah" element={<Umrah />} />
         
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
