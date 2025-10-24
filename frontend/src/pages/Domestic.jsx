@@ -37,12 +37,12 @@ const Domestic = () => {
   const PackageCard = ({ pkg }) => (
     <div className="flex flex-col bg-white border border-gray-200 shadow-lg rounded-[20px] hover:shadow-xl group overflow-hidden h-full">
       {/* Image Section - Full size */}
-      <div className="relative w-full h-[350px] bg-gray-100">
+      <div className="package-img-container">
         {pkg.image ? (
           <img
             src={pkg.image}
             alt={pkg.title}
-            className="absolute top-0 left-0 object-cover w-full h-full transition-transform duration-300 ease-out group-hover:scale-105"
+            className="package-img"
             onError={(e) => {
               e.target.src = 'https://via.placeholder.com/400x350?text=No+Image'
             }}
