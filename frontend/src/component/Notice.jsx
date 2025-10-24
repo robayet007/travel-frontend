@@ -39,27 +39,30 @@ const Notice = () => {
     return null; // Don't show anything if no notices
   }
 
-  const currentNotice = notices[0]; // Show only the first notice
-
   return (
     <div className="relative overflow-hidden bg-yellow-500 border-b border-yellow-600">
       {/* Notice Marquee */}
       <div className="py-3">
         <div className="marquee-container">
           <div className="marquee-content">
-            {/* Duplicate content for seamless loop */}
-            <span className="marquee-text">
-              {currentNotice.title}
-            </span>
-            <span className="marquee-text">
-              {currentNotice.title}
-            </span>
-            <span className="marquee-text">
-              {currentNotice.title}
-            </span>
-            <span className="marquee-text">
-              {currentNotice.title}
-            </span>
+            {/* Show all notices in sequence */}
+            {notices.map((notice, index) => (
+              <React.Fragment key={notice._id || index}>
+                <span className="marquee-text">
+                  {notice.title}
+                </span>
+                <span className="marquee-separator">•</span>
+              </React.Fragment>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {notices.map((notice, index) => (
+              <React.Fragment key={`dup-${notice._id || index}`}>
+                <span className="marquee-text">
+                  {notice.title}
+                </span>
+                <span className="marquee-separator">•</span>
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>
@@ -79,19 +82,27 @@ const Notice = () => {
 
         .marquee-text {
           display: inline-block;
-          padding: 0 50px;
+          padding: 0 15px;
           font-weight: 600;
           font-size: 14px;
           color: white;
           text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+          white-space: nowrap;
+        }
+
+        .marquee-separator {
+          display: inline-block;
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
         }
 
         @keyframes marquee {
           0% {
-            transform: translateX(100%);
+            transform: translateX(0%);
           }
           100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%);
           }
         }
 

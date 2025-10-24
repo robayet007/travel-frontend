@@ -180,12 +180,12 @@ export default function ContactRepresentatives() {
               key={member._id}
               className="w-full max-w-sm p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105"
             >
-              {/* Image */}
-              <div className="mb-4 overflow-hidden rounded-lg">
+              {/* Image Container with Fixed Aspect Ratio */}
+              <div className="relative mb-4 overflow-hidden rounded-lg aspect-square">
                 <img
                   src={getImageUrl(member.image)}
                   alt={member.name}
-                  className="object-cover w-full h-64 transition-transform duration-300 hover:scale-110"
+                  className="absolute inset-0 object-cover w-full h-full transition-transform duration-300 hover:scale-110"
                   onError={(e) => {
                     e.target.src = "/placeholder.svg"
                   }}

@@ -61,8 +61,8 @@ const CategorySection = ({ category }) => {
 
   const updateFeature = (index, value) => {
     const newFeatures = [...formData.features];
-    if (value.trim() && !value.startsWith('✅')) {
-      newFeatures[index] = '✅ ' + value;
+    if (value.trim() && !value.startsWith('')) {
+      newFeatures[index] = '' + value;
     } else {
       newFeatures[index] = value;
     }

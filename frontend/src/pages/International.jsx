@@ -34,42 +34,43 @@ const International = () => {
 
   // Package Card Component
   const PackageCard = ({ pkg }) => (
-    <div className="flex flex-col justify-between p-6 bg-white border border-gray-200 shadow-lg rounded-[20px] hover:shadow-xl group">
-      <div>
-        {/* Image Section */}
-        <div className="overflow-hidden rounded-[20px] h-80 mb-4 -mx-6 -mt-6">
-          {pkg.image ? (
-            <img
-              src={pkg.image} // Directly use the image URL from API
-              alt={pkg.title}
-              className="object-cover object-center w-full h-full transition-transform duration-300 ease-out group-hover:scale-105"
-              onError={(e) => {
-                e.target.src = 'https://via.placeholder.com/300x400?text=No+Image'
-              }}
-            />
-          ) : (
-            <div className="flex items-center justify-center w-full h-full bg-gray-300">
-              <span className="text-gray-500">No Image</span>
-            </div>
-          )}
-        </div>
-        
+    <div className="flex flex-col bg-white border border-gray-200 shadow-lg rounded-[20px] hover:shadow-xl group overflow-hidden h-full">
+      {/* Image Section - Full size */}
+      <div className="relative w-full h-[350px] bg-gray-100">
+        {pkg.image ? (
+          <img
+            src={pkg.image}
+            alt={pkg.title}
+            className="absolute top-0 left-0 object-cover w-full h-full transition-transform duration-300 ease-out group-hover:scale-105"
+            onError={(e) => {
+              e.target.src = 'https://via.placeholder.com/400x350?text=No+Image'
+            }}
+          />
+        ) : (
+          <div className="flex items-center justify-center w-full h-full bg-gray-300">
+            <span className="text-gray-500">No Image</span>
+          </div>
+        )}
+      </div>
+      
+      {/* Content Section */}
+      <div className="flex flex-col flex-grow p-6">
         {/* Title */}
-        <h3 className="text-xl font-semibold text-center text-gray-900 capitalize">
+        <h3 className="mb-4 text-xl font-semibold text-center text-gray-900 capitalize">
           {pkg.title}
         </h3>
         
         {/* Prices */}
-        <div className="mt-4 text-center">
+        <div className="mb-4 text-center">
           {pkg.price !== pkg.offerPrice ? (
-            <>
+            <div className="flex flex-wrap items-center justify-center gap-2">
               <span className="text-base font-extrabold text-gray-900 line-through border border-orange-300 rounded-md px-2 py-0.5">
                 ৳{pkg.price}
               </span>
-              <span className="ml-3 text-[2rem] font-extrabold text-orange-600">
+              <span className="text-[2rem] font-extrabold text-orange-600">
                 ৳{pkg.offerPrice}
               </span>
-            </>
+            </div>
           ) : (
             <span className="text-[2rem] font-extrabold text-orange-600">
               ৳{pkg.offerPrice}
@@ -78,29 +79,31 @@ const International = () => {
         </div>
         
         {/* Features */}
-        {pkg.features && pkg.features.length > 0 ? (
-          <ul className="mt-6 space-y-2 text-gray-700">
-            {pkg.features.slice(0, 6).map((feature, index) => (
-              <li key={index} className="flex items-start">
-                <span className="mr-2 text-green-500">✅</span>
-                <span>{feature}</span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <div className="mt-6 text-center text-gray-500">
-            No features listed
-          </div>
-        )}
+        <div className="flex-grow mb-4">
+          {pkg.features && pkg.features.length > 0 ? (
+            <ul className="space-y-2 text-gray-700">
+              {pkg.features.slice(0, 6).map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="mr-2 text-green-500">✅</span>
+                  <span className="text-sm">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-center text-gray-500">
+              No features listed
+            </div>
+          )}
+        </div>
+        
+        {/* Book Now Button */}
+        <Link
+          to="/contact"
+          className="inline-block px-5 py-3 mt-auto font-medium text-center text-white transition duration-700 ease-in-out rounded-lg bg-gradient-to-r from-purple-800 via-pink-600 to-orange-500 hover:opacity-90 hover:scale-[1.05]"
+        >
+          Book Now
+        </Link>
       </div>
-      
-      {/* Book Now Button */}
-      <Link
-        to="/contact"
-        className="inline-block px-5 py-3 mt-8 font-medium text-center text-white transition duration-700 ease-in-out rounded-lg bg-gradient-to-r from-purple-800 via-pink-600 to-orange-500 hover:text-blue-600 hover:opacity-90 hover:scale-[1.05]"
-      >
-        Book Now
-      </Link>
     </div>
   )
 
@@ -160,16 +163,16 @@ const International = () => {
       )}
 
       {/* Agency Info */}
-       <div className="flex items-center justify-center w-full max-w-4xl mx-auto my-12 overflow-hidden bg-white shadow-2xl h-80 rounded-xl">
+      <div className="flex items-center justify-center w-full max-w-4xl mx-auto my-12 overflow-hidden bg-white shadow-2xl rounded-xl aspect-[16/6]">
         <img
           src="/Bannar.jpg"
           alt="Agency Info"
           className="object-cover w-full h-full transition-transform duration-700 ease-in-out transform hover:scale-[1.05]"
           onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/800x400?text=International+Travel+Agency'
+            e.target.src = 'https://via.placeholder.com/800x300?text=International+Travel+Agency'
           }}
         />
-      </div> 
+      </div>
     </section>
   )
 }
