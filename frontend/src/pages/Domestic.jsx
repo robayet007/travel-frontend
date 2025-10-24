@@ -164,13 +164,15 @@ const Domestic = () => {
       )}
 
       {/* Agency Info */}
-      <div className="flex items-center justify-center w-full max-w-4xl mx-auto my-12 overflow-hidden bg-white shadow-2xl rounded-xl aspect-[16/6]">
+      <div className="banner-img-container">
         <img
           src="/Bannar.jpg"
           alt="Agency Info"
-          className="object-cover w-full h-full transition-transform duration-700 ease-in-out transform hover:scale-[1.05]"
+          className="banner-img"
+          style={{ width: "1200px" }}
           onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/800x300?text=Domestic+Travel+Agency'
+            e.target.src =
+              "https://via.placeholder.com/1200x800?text=Hajj+Umrah+Travel+Agency";
           }}
         />
       </div>
