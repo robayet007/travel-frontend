@@ -181,11 +181,15 @@ export default function ContactRepresentatives() {
               className="w-full max-w-sm p-6 text-center transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105"
             >
               {/* Image Container with Fixed Aspect Ratio */}
-              <div className="relative mb-4 overflow-hidden rounded-lg aspect-square">
+              <div className="">
                 <img
                   src={getImageUrl(member.image)}
                   alt={member.name}
-                  className="absolute inset-0 object-cover w-full h-full transition-transform duration-300 hover:scale-110"
+                  style={{
+                    borderRadius:"10px",
+                    // padding:"10px"
+                    marginBottom:"10px"
+                  }}
                   onError={(e) => {
                     e.target.src = "/placeholder.svg"
                   }}
