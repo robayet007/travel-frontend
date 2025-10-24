@@ -14,6 +14,7 @@ import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Notice from "./component/Notice";
+import LandServices from "./pages/LandServices"
 
 function AppContent() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function AppContent() {
         <Route path="/domestic" element={<Domestic />} />
         <Route path="/international" element={<International />} />
         <Route path="/hajj" element={<Hajj />} />
+        <Route path="/land-services" element={<LandServices/>} />
         
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />

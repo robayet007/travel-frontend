@@ -101,7 +101,7 @@ export default function Navbar() {
 
                 {/* Dropdown Menu */}
                 {isTourDropdownOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="absolute left-0 z-50 w-48 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                       <Link
                         to="/international"
@@ -139,7 +139,7 @@ export default function Navbar() {
             </a>
 
             <Link
-              to="/services"
+              to="/land-services"
               className="px-6 py-2 font-semibold text-white transition rounded-md shadow bg-gradient-to-r from-purple-800 via-pink-600 to-orange-500 hover:opacity-90"
             >
               Land Services
@@ -169,17 +169,17 @@ export default function Navbar() {
 
           {/* Mobile Tour Package Links */}
           <div className="px-3 py-2">
-            <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Tour Packages</p>
+            <p className="text-sm font-semibold tracking-wider text-gray-400 uppercase">Tour Packages</p>
             <Link
               to="/international"
-              className="block px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"
+              className="block px-3 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
               onClick={() => setIsOpen(false)}
             >
               International Tour Package
             </Link>
             <Link
               to="/domestic"
-              className="block px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"
+              className="block px-3 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
               onClick={() => setIsOpen(false)}
             >
               Domestic Tour Package
@@ -201,7 +201,7 @@ export default function Navbar() {
 
           {/* Mobile Land Services */}
           <Link
-            to="/services"
+            to="/land-services"
             className="block px-3 py-2 font-semibold text-white transition rounded-md bg-gradient-to-r from-purple-800 via-pink-600 to-orange-500 hover:opacity-90"
             onClick={() => setIsOpen(false)}
           >

@@ -160,16 +160,16 @@ const International = () => {
       )}
 
       {/* Agency Info */}
-      {/* <div className="flex items-center justify-center w-full max-w-4xl mx-auto my-12 overflow-hidden bg-white shadow-2xl h-80 rounded-xl">
+       <div className="flex items-center justify-center w-full max-w-4xl mx-auto my-12 overflow-hidden bg-white shadow-2xl h-80 rounded-xl">
         <img
-          src="/agency-info.jpg"
+          src="/Bannar.jpg"
           alt="Agency Info"
           className="object-cover w-full h-full transition-transform duration-700 ease-in-out transform hover:scale-[1.05]"
           onError={(e) => {
             e.target.src = 'https://via.placeholder.com/800x400?text=International+Travel+Agency'
           }}
         />
-      </div> */}
+      </div> 
     </section>
   )
 }
