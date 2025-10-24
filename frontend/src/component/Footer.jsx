@@ -17,16 +17,56 @@ export default function Footer() {
   ]
 
   const airlineLogos = [
-    "/AirlinesSupport-01.png",
-    "/AirlinesSupport-02.png",
-    "/AirlinesSupport-03.png",
-    "/AirlinesSupport-04.png",
-    "/AirlinesSupport-05.png",
-    "/AirlinesSupport-06.png",
-    "/AirlinesSupport-07.png",
-    "/AirlinesSupport-08.png",
-    "/AirlinesSupport-09.png",
+    {
+      src: "/AirlinesSupport-01.png",
+      name: "Biman Bangladesh Airlines",
+      url: "https://www.biman-airlines.com"
+    },
+    {
+      src: "/AirlinesSupport-02.png",
+      name: "US-Bangla Airlines",
+      url: "https://www.us-bangla.com"
+    },
+    {
+      src: "/AirlinesSupport-03.png",
+      name: "Novoair",
+      url: "https://www.novoair.com"
+    },
+    {
+      src: "/AirlinesSupport-04.png",
+      name: "Saudia Airlines",
+      url: "https://www.saudia.com"
+    },
+    {
+      src: "/AirlinesSupport-05.png",
+      name: "Fly Dubai",
+      url: "https://www.flydubai.com"
+    },
+    {
+      src: "/AirlinesSupport-06.png",
+      name: "Qatar Airways",
+      url: "https://www.qatarairways.com"
+    },
+    {
+      src: "/AirlinesSupport-07.png",
+      name: "Indigo",
+      url: "https://www.goindigo.in"
+    },
+    {
+      src: "/AirlinesSupport-08.png",
+      name: "SriLankan Airlines",
+      url: "https://www.srilankan.com"
+    },
+    {
+      src: "/AirlinesSupport-09.png",
+      name: "Vistara",
+      url: "https://www.airvistara.com"
+    }
   ]
+
+  const handleAirlineClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
 
   return (
     <footer className="relative text-white bg-gray-900">
@@ -149,11 +189,16 @@ export default function Footer() {
           <div>
             <h3 className="mb-6 text-xl font-semibold text-cyan-400">Airlines Support</h3>
             <div className="grid grid-cols-3 gap-2">
-              {airlineLogos.map((logo, index) => (
-                <div key={index} className="p-1 transition-transform duration-300 bg-white rounded hover:scale-105">
+              {airlineLogos.map((airline, index) => (
+                <div 
+                  key={index} 
+                  className="p-1 transition-all duration-300 bg-white rounded cursor-pointer hover:scale-105 hover:shadow-lg"
+                  onClick={() => handleAirlineClick(airline.url)}
+                  title={`Visit ${airline.name}`}
+                >
                   <img
-                    src={logo || "/placeholder.svg"}
-                    alt={`Airline logo ${index + 1}`}
+                    src={airline.src || "/placeholder.svg"}
+                    alt={`${airline.name} logo`}
                     className="object-contain w-full h-8"
                   />
                 </div>

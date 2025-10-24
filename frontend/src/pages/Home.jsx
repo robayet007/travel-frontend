@@ -31,27 +31,27 @@ export default function Home() {
       {[
         {
           name: 'Holly Mecca Sharif',
-          img: '/makka.png',
+          img: '/dmakka.jpg',
         },
         {
           name: 'Dubai',
-          img: '/destination-02.png',
+          img: '/ddubai.png',
         },
         {
           name: 'Madina Sharif',
-          img: '/madina.png',
+          img: '/dmadina.jpg',
         },
         {
-          name: 'New York , USA',
-          img: '/usa.png',
+          name: 'Singapore',
+          img: '/dsingapore.jpg',
         },
         {
-          name: 'Swiss Alps',
-          img: '/destination-05.jpg',
+          name: 'Thailand',
+          img: '/dthailand.jpg',
         },
         {
-          name: 'Indonessia',
-          img: '/destination-01.jpg',
+          name: 'Japan',
+          img: '/djapan.png',
         },
       ].map((item, index) => (
         <div key={index} className="overflow-hidden transition bg-white rounded-lg shadow hover:shadow-lg">
