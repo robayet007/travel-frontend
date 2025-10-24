@@ -8,7 +8,7 @@ export default function Hajj() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_BASE = 'https://travel-backend-3db7.onrender.com';
+  const API_BASE = "https://travel-backend-3db7.onrender.com";
 
   // Fetch packages from API
   useEffect(() => {
@@ -16,26 +16,25 @@ export default function Hajj() {
       try {
         setLoading(true);
         setError(null);
-        
+
         // Fetch all packages and filter client-side
         const response = await axios.get(`${API_BASE}/api/products`);
         const allPackages = response.data.data;
-        
+
         // Filter Umrah packages
         const umrahData = allPackages.filter(
-          pkg => pkg.category === 'holy-umrah-hajj'
+          (pkg) => pkg.category === "holy-umrah-hajj"
         );
         setUmrahPackages(umrahData);
-        
-        // Filter Hajj packages  
+
+        // Filter Hajj packages
         const hajjData = allPackages.filter(
-          pkg => pkg.category === 'holy-hajj'
+          (pkg) => pkg.category === "holy-hajj"
         );
         setHajjPackages(hajjData);
-        
       } catch (error) {
-        console.error('Error fetching packages:', error);
-        setError('Failed to load packages. Please try again later.');
+        console.error("Error fetching packages:", error);
+        setError("Failed to load packages. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -55,7 +54,8 @@ export default function Hajj() {
             alt={pkg.title}
             className="absolute top-0 left-0 object-cover w-full h-full transition-transform duration-300 ease-out group-hover:scale-105"
             onError={(e) => {
-              e.target.src = 'https://via.placeholder.com/400x350?text=No+Image';
+              e.target.src =
+                "https://via.placeholder.com/400x350?text=No+Image";
             }}
           />
         ) : (
@@ -64,14 +64,14 @@ export default function Hajj() {
           </div>
         )}
       </div>
-      
+
       {/* Content Section */}
       <div className="flex flex-col flex-grow p-6">
         {/* Title */}
         <h3 className="mb-4 text-xl font-semibold text-center text-gray-900 capitalize">
           {pkg.title}
         </h3>
-        
+
         {/* Prices */}
         <div className="mb-4 text-center">
           {pkg.price !== pkg.offerPrice ? (
@@ -89,7 +89,7 @@ export default function Hajj() {
             </span>
           )}
         </div>
-        
+
         {/* Features */}
         <div className="flex-grow mb-4">
           {pkg.features && pkg.features.length > 0 ? (
@@ -102,12 +102,10 @@ export default function Hajj() {
               ))}
             </ul>
           ) : (
-            <div className="text-center text-gray-500">
-              No features listed
-            </div>
+            <div className="text-center text-gray-500">No features listed</div>
           )}
         </div>
-        
+
         {/* Book Now Button */}
         <Link
           to="/contact"
@@ -123,7 +121,9 @@ export default function Hajj() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="text-xl text-gray-600">Loading Hajj & Umrah packages...</div>
+        <div className="text-xl text-gray-600">
+          Loading Hajj & Umrah packages...
+        </div>
       </div>
     );
   }
@@ -160,7 +160,8 @@ export default function Hajj() {
         {umrahPackages.length > 0 ? (
           <>
             <div className="mb-6 text-sm text-gray-600">
-              Showing {umrahPackages.length} Umrah package{umrahPackages.length !== 1 ? 's' : ''}
+              Showing {umrahPackages.length} Umrah package
+              {umrahPackages.length !== 1 ? "s" : ""}
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {umrahPackages.map((pkg) => (
@@ -170,8 +171,12 @@ export default function Hajj() {
           </>
         ) : (
           <div className="py-12 text-center">
-            <p className="text-xl text-gray-600">No Umrah packages available yet</p>
-            <p className="mt-2 text-gray-500">Check back later for amazing Umrah packages</p>
+            <p className="text-xl text-gray-600">
+              No Umrah packages available yet
+            </p>
+            <p className="mt-2 text-gray-500">
+              Check back later for amazing Umrah packages
+            </p>
           </div>
         )}
 
@@ -188,7 +193,8 @@ export default function Hajj() {
         {hajjPackages.length > 0 ? (
           <>
             <div className="mb-6 text-sm text-gray-600">
-              Showing {hajjPackages.length} Hajj package{hajjPackages.length !== 1 ? 's' : ''}
+              Showing {hajjPackages.length} Hajj package
+              {hajjPackages.length !== 1 ? "s" : ""}
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {hajjPackages.map((pkg) => (
@@ -198,20 +204,26 @@ export default function Hajj() {
           </>
         ) : (
           <div className="py-12 text-center">
-            <p className="text-xl text-gray-600">No Hajj packages available yet</p>
-            <p className="mt-2 text-gray-500">Check back later for amazing Hajj packages</p>
+            <p className="text-xl text-gray-600">
+              No Hajj packages available yet
+            </p>
+            <p className="mt-2 text-gray-500">
+              Check back later for amazing Hajj packages
+            </p>
           </div>
         )}
       </section>
 
       {/* Agency Info */}
-      <div className="flex items-center justify-center w-full max-w-4xl mx-auto my-12 overflow-hidden bg-white shadow-2xl rounded-xl aspect-[16/6]">
+      <div className="banner-img-container">
         <img
           src="/Bannar.jpg"
           alt="Agency Info"
-          className="object-cover w-full h-full transition-transform duration-700 ease-in-out transform hover:scale-[1.05]"
+          className="banner-img"
+          style={{ width: "1200px" }}
           onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/800x300?text=Hajj+Umrah+Travel+Agency';
+            e.target.src =
+              "https://via.placeholder.com/1200x800?text=Hajj+Umrah+Travel+Agency";
           }}
         />
       </div>

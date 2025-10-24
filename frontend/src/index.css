@@ -195,3 +195,16 @@ body {
     }
   }
 }
+
+/* banner */
+.banner-img-container
+{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.banner-img-container img
+{
+  border-radius: 10px;
+}
