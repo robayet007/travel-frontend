@@ -4,14 +4,13 @@ import About from './About'
 import { Link } from 'react-router-dom'
 import '../index.css'
 import ContactRepresentatives from '../component/ContactRepresentatives'
-import { Helmet } from 'react-helmet'
 
 export default function Home() {
   return (
     <div className="text-gray-800 bg-white">
       
       {/* 🔥 Schema Markup যোগ করুন এখানে */}
-      <Helmet>
+      {/* <Helmet>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -44,7 +43,7 @@ export default function Home() {
             ]
           })}
         </script>
-      </Helmet>
+      </Helmet> */}
 
       {/* hero*/}
       <div className="max-w-lg p-8 mx-auto text-center animated-border-container font-new-family">
