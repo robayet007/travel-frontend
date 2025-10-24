@@ -239,9 +239,9 @@ export default function ContactRepresentatives() {
               <h3 className="mb-2 text-xl font-bold text-gray-800">
                 {member.name}
               </h3>
-              <p className="mb-4 text-sm text-gray-600">
+              {/* <p className="mb-4 text-sm text-gray-600">
                 Travel Representative
-              </p>
+              </p> */}
               
               {/* Contact Info - Text removed, only icons remain */}
               {(member.facebook || member.twitter || member.instagram) && (
