@@ -102,11 +102,158 @@ export default function LandServices() {
         </ul>
       </section>
 
-      <div className="">
-        <img src="/Screenshot_295.png" alt="land service"/>
-        <img src="/Screenshot_296.png" alt="land service"/>
-        <img src="/Screenshot_297.png" alt="land service"/>
-      </div>
+      
+      {/* Commitment Section */}
+      <section className="px-6 py-10 bg-white sm:px-12">
+        <h2 className="mb-6 text-3xl font-bold text-center text-orange-600 sm:text-4xl">
+          আমাদের লক্ষ্য | <span className="text-gray-700">Our Commitment:</span>
+        </h2>
+
+        <p className="max-w-3xl mx-auto mb-4 text-lg text-center">
+          প্রতিটি গ্রাহকের জন্য সঠিক, নির্ভুল এবং স্বচ্ছ সেবা নিশ্চিত করা।
+        </p>
+        <p className="max-w-3xl mx-auto mb-8 text-lg text-center text-gray-600">
+          Ensuring accurate, reliable, and transparent services for every client.
+        </p>
+
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* আধুনিক সঠিক পরিমাপ */}
+          <div>
+            <h3 className="mb-3 text-2xl font-bold text-blue-600">
+              ⬇️ আধুনিক সঠিক পরিমাপ ⬇️
+            </h3>
+            <p className="mb-4 text-lg leading-relaxed">
+              ডিজিটাল ল্যান্ড সার্ভে সেন্টার-এ আমরা জমি সংক্রান্ত সকল ধরনের সেবা প্রদান করি। এর মধ্যে রয়েছে সকল প্রকার জমির পরিমাপ, মৌজা বক্সা অনুযায়ী সীমানা নির্ধারণ, ডিজিটাল সার্ভে, দলিল, বাইটিস এবং নকশা সম্পর্কিত পেশাদার সেবা। আমাদের দক্ষ টিম আধুনিক যন্ত্রপাতি কম্পিউটারাইজড পদ্ধতি ব্যবহার করে দ্রুত ও নির্ভুলভাবে সকল কাজ করা।
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              আমাদের দশ টিম সরেজমিনে গিয়ে সুপার টোটাল স্টেশনের সাহায্যে জমাদের জমি পরিমাপ ও সীমানা নির্ধারণের কাজ করে। আমরা প্রতিটি জমাদার পরিমাপ নিশ্চিত করি সর্বোচ্চ প্রযুক্তি ও মানমানের মাধ্যমে, যাতে জমি সংক্রান্ত কোন বিষয় বা বিরোধ না থাকে।
+            </p>
+            <div className="flex justify-center">
+              <img
+                src="/commit1.png"
+                alt="Field Survey"
+                className="w-full h-auto max-w-md border border-gray-300 rounded-lg"
+              />
+            </div>
+          </div>
+
+          {/* মৌজা ম্যাপ সংগ্রহের সুবিধা */}
+          <div>
+            <h3 className="mb-3 text-2xl font-bold text-blue-600">
+              ⬇️ মৌজা ম্যাপ সংগ্রহের সুবিধা ⬇️
+            </h3>
+            <p className="mb-4 text-lg leading-relaxed">
+              সকল বাংলাদেশের যেকোনো জমাদার CS, SA, RS ও BS মৌজা ম্যাপ বা নকশা সহজেই যাহের করা সম্ভব। বিশেষ করে দূরা পরিত্যক্ত অঞ্চলের করলো চালু করি অরিজিন অনিশ্চিত থেকে মৌজা ম্যাপ বা নকশা পেতে সুদেশ খুবই শান বা, তাদের জন্য আমরা একটি সুবিধাজনক সমাধান প্রদান করি। মাধ্যমা অন্তর্ভুক্তে মাধ্যমে তারা নিজ উপাত্তমার কুরিয়ার সার্ভিসের মাধ্যমে নিরবচ্ছিন্ন পেতে পারবেন তাদের বাড়িতে বা কার্যালয়ে পারবেন।
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              আমাদের এই সেবার মাধ্যমে, আমিল, মন্ত্রিণ বা তুমি কর্তৃপক্ষীর প্রয়োজনীয় দক্ষতা ও তথ্য সহজেই সহজভাবে পাঠানো যাবেন। এছে আপনি পরিচিতি, সীমানা নির্ধারণ বা অন্যান্য জমিবি কাজগুলি দায়িত্ব অক্ষ ও উপরিভাতের সম্মেলা করা সহজ হয়।
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              মৌজা ম্যাপ সংগ্রহের জন্য প্রয়োজনীয় যাবতে করলের তথ্যদে, প্রচারজনীয় তথ্যদোলা যোগাযোগ প্রদান করা উচিত ও এতে করে ম্যাপ সংগ্রহের কাজ অক্ষ, নির্ভুল এবং কাউন্টারুভাবের সম্পন্ন হয়।
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <img
+                src="/commit2.png"
+                alt="Mouza Map 1"
+                className="w-full h-auto max-w-xs border border-gray-300 rounded-lg"
+              />
+              <img
+                src="/commit3.png"
+                alt="Mouza Map 2"
+                className="w-full h-auto max-w-xs border border-gray-300 rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Equipment & Training Section */}
+      <section className="px-6 py-10 bg-gray-100 sm:px-12">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* ভূমি পরিমাপের যন্ত্রপাতি সরবরাহ */}
+          <div>
+            <h3 className="mb-3 text-2xl font-bold text-blue-600">
+              ⬇️ ভূমি পরিমাপের যন্ত্রপাতি সরবরাহ ⬇️
+            </h3>
+            <p className="mb-4 text-lg leading-relaxed">
+              দেশের যেকোনো জমাদার আমরা মুরগির সাভিসের মাধ্যমে অন্যা সরবারি জমাদের লেখের থেকে আধুনিক তুমি পরিমাপের যন্ত্রপাতি সরবরাহ করি। আমাদের সরবারাহকৃত যন্ত্রপাতি ডুপিএনভিট, নির্ভুল এবং ব্যবহারযোগ্য মানসম্পন্ন, যা সাভিসের, আবেরি এবং আলস সঠিক সম্পর্কে দ্রুত উপরানো।
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              গ্রাহকরা সহজেই প্রয়োজনীয় যন্ত্রপাতি নির্ধিত টিইভিযার জাভ এবং নিয়ম্বগুলার থেকে পারবেন। এছাড়াও, যন্ত্রপাতির সরকারের তথেকে প্রয়োজনের হলে আমরা প্রাথমিক মহায়তা ও পরামর্শও প্রদান করি, যাতে গ্রাহক সঠিকভাবে যন্ত্রপাতি ব্যবহার করে নির্ভুল ফলাফল পেতে পারেন।
+            </p>
+            <div className="flex justify-center mb-4">
+              <img
+                src="/landservices-equipment.png"
+                alt="Survey Equipment"
+                className="w-full h-auto max-w-2xl border border-gray-300 rounded-lg"
+              />
+            </div>
+          </div>
+
+          {/* ভূমি জরিপ ও আমিনশীপ প্রশিক্ষণ */}
+          <div>
+            <h3 className="mb-3 text-2xl font-bold text-blue-600">
+              ⬇️ভূমি জরিপ ও আমিনশীপ প্রশিক্ষণ
+            </h3>
+            <p className="mb-4 text-lg leading-relaxed">
+              ডিজিটাল ল্যান্ড সার্ভে সেন্টার-এ শারীরী শিক্ষার্থী ও পেশাদারীদের জন্য আমরা পরিচালনা করি তুমি জরিপ প্রশিক্ষণ ও আমিনশিপ প্রশিক্ষণ। এই প্রশিক্ষণ প্রোগ্রামটি ও মান ও আমিন আবেরি সেভার বিজনেস উপকরণ, পোতের বাংলা মান পাঠের ও তুমি জরিপ পদ্ধতি, নকশা ধিরি, দলিল ফাচাই এবং সীমানা নির্ধারণের ব্যবহারিক দক্ষতা অর্জন করতে পারবেন।
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              কোর্স সম্পন্ন হলে অংশগ্রহণকারীদের অফিসিয়াল আমিনশীপ সার্টিফিকেট প্রদান করা হয়, যা তাদের পেশাগত উন্নয়ন ও জমি জরিপসেবে দক্ষতা প্রমাণের জন্য অত্যন্ত মূল্যবান।
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              এছাড়া, দানা ডিজিটাল প্রযুক্তি ও কাম্পিউটারাইজড তুমি জরিপের প্রার্থনী প্রশিক্ষণী, তাদের জন্য ডিজিটাল সার্ভে কোর্স-এ পরিচালনা করা হয়। এই কোর্সে শিখানোরা ডিজিটাল সাভিবে, GPS, Total Station, AutoCAD এবং অন্যান্য আধুনিক সরবারী ব্যবহার করে তুমি জরিপের সম্পূর্ণ প্রশিক্ষণ নিতে পারবেন।
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <img
+                src="/landservices-training1.png"
+                alt="Training Session 1"
+                className="w-full h-auto max-w-sm border border-gray-300 rounded-lg"
+              />
+              <img
+                src="/landservices-training2.png"
+                alt="Training Session 2"
+                className="w-full h-auto max-w-sm border border-gray-300 rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+        {/* জমি ও ফ্ল্যাট সংক্রান্ত সেবা Section */}
+      <section className="px-6 py-10 bg-white sm:px-12">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="mb-4 text-2xl font-bold text-blue-600">
+            ⬇️জমি ও ফ্ল্যাট সংক্রান্ত সেবা
+          </h3>
+          <p className="mb-4 text-lg leading-relaxed">
+            জমি বা ফ্ল্যাট বেনার পূর্ব আমরা প্রদান করি দলিলপত্র জমাদার, রাজীবভাষ্য রট ধৈর্জি এবং স্বল্পীতে নকশা প্রকৃতি পুরাতন সেবা। আমাদের প্রতিভা টিম বাংলাদেশের যেকোনো লাহ-রেজিস্ট্রি অফিসে জমির দলিল রেজিস্ট্রিকৃত সহযোগী প্রদান করে, যাতে আপনার সম্পত্তি ক্রয় নিরাপদ ও নিশ্চিত থাকে।
+          </p>
+          <p className="mb-6 text-lg leading-relaxed">
+            প্রাবল চাইলে বাংলাদেশের যেকোনো জেলার বা কোনো জমাদার দলিল, খতিয়ান ও নকশা সম্পূর্কিত সকল প্রকার সেবা আমাদের কাছ থেকে নিতে পারবেন। আমরা নিষ্ঠিক তথিব দ্রুত দাগ সহভিত্ত পরচ, নির্ভুল, স্বচ্ছ ও নিশ্চিতভাবেরহেলবে সম্পাহন হয়, যাতে জমি বা ফ্ল্যাট ক্রয় প্রক্রিয়া কাউন্টারুমুক্ত হয়।
+          </p>
+          
+          <div className="flex justify-center mb-8">
+            <img
+              src="/landservices-land-flat.png"
+              alt="Land and Flat Services"
+              className="w-full h-auto max-w-lg border border-gray-300 rounded-lg"
+            />
+          </div>
+
+          <p className="mb-6 text-xl text-center">
+            সরাসরি অফিসে এসে ভূমি বিষয়ক যে কোন বিষয়ে সহযোগীতা নিতে পারবেন।
+          </p>
+
+          <div className="flex justify-center">
+            <img
+              src="/landservices-contact-card.png"
+              alt="Contact Card"
+              className="w-full h-auto max-w-md border-2 border-purple-600 rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-6 mt-10 text-center text-white bg-blue-900">
