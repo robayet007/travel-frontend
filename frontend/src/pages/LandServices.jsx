@@ -10,9 +10,13 @@ export default function LandServices() {
         paddingTop:'10px'
       }}>
         <img
-          src="/landservices-banner1.png" // <-- এখানে তোমার প্রথম ছবির path দাও
+          src="/0.jpg"
           alt="Digital Land Survey Center"
           className="w-full h-auto border border-gray-300 rounded-lg"
+          style={{
+            padding:"10px",
+            border:"10px solid #0046FF"
+          }}
         />
       </section>
 
@@ -25,7 +29,7 @@ export default function LandServices() {
 
         <div className="flex flex-col items-center mt-6">
           <img
-            src="/landservices-profile.png" // <-- এখানে তোমার নিজের ছবির path দাও
+            src="/1.jpg"
             alt="Owner"
             className="object-cover w-40 h-48 border-4 border-blue-400 rounded-lg"
           />
@@ -44,14 +48,14 @@ export default function LandServices() {
 
         <div className="flex flex-col items-center gap-6 md:flex-row">
           <img
-            src="/landservices-logo.png" // <-- দ্বিতীয় ছবির লোগো দিলে এখানে দাও
+            src="/2.jpg"
             alt="Logo"
             className="object-contain w-40 h-40"
           />
 
           <div className="text-lg leading-relaxed">
             <p>
-              “ডিজিটাল ল্যান্ড সার্ভে সেন্টার”-এ আপনাকে স্বাগতম। আমরা আধুনিক প্রযুক্তি ও
+              "ডিজিটাল ল্যান্ড সার্ভে সেন্টার"-এ আপনাকে স্বাগতম। আমরা আধুনিক প্রযুক্তি ও
               কম্পিউটারাইজড ডিজিটাল সিস্টেমের মাধ্যমে ভূমির পরিমাপ এবং তথ্য বিশ্লেষণ করে থাকি।
               আমাদের লক্ষ্য হলো— গ্রাহকদের জমি সংক্রান্ত প্রতিটি সমস্যা নির্ভুল, নির্ভরযোগ্য ও
               দ্রুত সমাধান প্রদান করা।
@@ -130,7 +134,7 @@ export default function LandServices() {
             </p>
             <div className="flex justify-center">
               <img
-                src="/commit1.png"
+                src="/3.jpg"
                 alt="Field Survey"
                 className="w-full h-auto max-w-md border border-gray-300 rounded-lg"
               />
@@ -153,12 +157,12 @@ export default function LandServices() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <img
-                src="/commit2.png"
+                src="/4.jpg"
                 alt="Mouza Map 1"
                 className="w-full h-auto max-w-xs border border-gray-300 rounded-lg"
               />
               <img
-                src="/commit3.png"
+                src="/5.jpg"
                 alt="Mouza Map 2"
                 className="w-full h-auto max-w-xs border border-gray-300 rounded-lg"
               />
@@ -183,7 +187,7 @@ export default function LandServices() {
             </p>
             <div className="flex justify-center mb-4">
               <img
-                src="/landservices-equipment.png"
+                src="/6.jpg"
                 alt="Survey Equipment"
                 className="w-full h-auto max-w-2xl border border-gray-300 rounded-lg"
               />
@@ -206,12 +210,12 @@ export default function LandServices() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <img
-                src="/landservices-training1.png"
+                src="/7.jpg"
                 alt="Training Session 1"
                 className="w-full h-auto max-w-sm border border-gray-300 rounded-lg"
               />
               <img
-                src="/landservices-training2.png"
+                src="/8.jpg"
                 alt="Training Session 2"
                 className="w-full h-auto max-w-sm border border-gray-300 rounded-lg"
               />
@@ -235,7 +239,7 @@ export default function LandServices() {
           
           <div className="flex justify-center mb-8">
             <img
-              src="/landservices-land-flat.png"
+              src="/9.jpg"
               alt="Land and Flat Services"
               className="w-full h-auto max-w-lg border border-gray-300 rounded-lg"
             />
@@ -247,7 +251,7 @@ export default function LandServices() {
 
           <div className="flex justify-center">
             <img
-              src="/landservices-contact-card.png"
+              src="/10.jpg"
               alt="Contact Card"
               className="w-full h-auto max-w-md border-2 border-purple-600 rounded-lg"
             />
@@ -257,9 +261,8 @@ export default function LandServices() {
 
       {/* Footer */}
       <footer className="py-6 mt-10 text-center text-white bg-blue-900">
-        <p className="text-lg font-semibold">
-          ডিজিটাল ল্যান্ড সার্ভে সেন্টার, দিঘলদী বাজার, আড়াইহাজার, নারায়ণগঞ্জ
-        </p>
+         <h1 className="text-[2rem]">ডিজিটাল ল্যান্ড সার্ভে সেন্টার</h1>
+         <h2>দিঘলদী বাজার , আড়াইহাজার, নারায়ণগঞ্জ</h2>
         <p>📞 01733-564476, 01934-113271</p>
       </footer>
     </div>
