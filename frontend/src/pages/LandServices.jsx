@@ -102,6 +102,12 @@ export default function LandServices() {
         </ul>
       </section>
 
+      <div className="">
+        <img src="/Screenshot_295.png" alt="land service"/>
+        <img src="/Screenshot_296.png" alt="land service"/>
+        <img src="/Screenshot_297.png" alt="land service"/>
+      </div>
+
       {/* Footer */}
       <footer className="py-6 mt-10 text-center text-white bg-blue-900">
         <p className="text-lg font-semibold">
