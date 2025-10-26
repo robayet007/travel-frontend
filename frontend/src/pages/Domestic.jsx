@@ -163,19 +163,7 @@ const Domestic = () => {
         </div>
       )}
 
-      {/* Agency Info */}
-      <div className="banner-img-container">
-        <img
-          src="/Bannar.jpg"
-          alt="Agency Info"
-          className="banner-img"
-          style={{ width: "1200px" }}
-          onError={(e) => {
-            e.target.src =
-              "https://via.placeholder.com/1200x800?text=Hajj+Umrah+Travel+Agency";
-          }}
-        />
-      </div>
+      
     </section>
   )
 }
